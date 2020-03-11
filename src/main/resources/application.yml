@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: dubbo-demo-consumer
+  dubbo:
+    registry: zookeeper://127.0.0.1:2181
