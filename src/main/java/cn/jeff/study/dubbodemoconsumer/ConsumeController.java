@@ -2,8 +2,8 @@ package cn.jeff.study.dubbodemoconsumer;
 
 import cn.jeff.study.dubbodemoprovider.HelloService;
 import cn.jeff.study.dubbodemoprovider.Student;
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.fastjson.JSON;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
