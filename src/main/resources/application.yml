@@ -3,4 +3,4 @@ spring:
     name: dubbo-demo-consumer
 dubbo:
   registry:
-    address: zookeeper://127.0.0.1:2181
+    address: zookeeper://guang:2290
