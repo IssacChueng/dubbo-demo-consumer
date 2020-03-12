@@ -30,7 +30,6 @@ public class ConsumeController {
     @GetMapping(value = "/consume")
     public ResponseEntity<Student> read() {
         Student student = helloService.getStudent();
-        System.out.println(JSON.toJSONString(student));
         ConsumerRunner consumerRunner = new ConsumerRunner();
         consumerRunner.setHelloService(helloService);
         taskExecutor.execute(consumerRunner);

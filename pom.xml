@@ -106,6 +106,9 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <outputDirectory>/Users/jeff/test/dubbo/</outputDirectory>
+                </configuration>
             </plugin>
         </plugins>
     </build>
