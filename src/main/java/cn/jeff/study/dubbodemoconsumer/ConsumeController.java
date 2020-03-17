@@ -7,6 +7,7 @@ import org.springframework.core.task.TaskExecutor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,5 +34,17 @@ public class ConsumeController {
         consumerRunner.setHelloService(helloService);
         taskExecutor.execute(consumerRunner);
         return ResponseEntity.ok(student);
+    }
+
+    /**
+     * only 1, 2, 3
+     * @param i
+     * @return
+     */
+    @GetMapping(value = "/consume/{i}")
+    public ResponseEntity<String> read1k(@PathVariable(name = "i") Integer i) {
+        String word = helloService.getOneWord(i);
+
+        return ResponseEntity.ok(word);
     }
 }
