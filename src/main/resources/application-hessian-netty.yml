@@ -1,0 +1,4 @@
+dubbo:
+  protocol:
+    serialization: hessian2
+    transporter: netty4

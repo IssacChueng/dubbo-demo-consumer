@@ -1,0 +1,5 @@
+dubbo:
+  protocol:
+    serialization: fastjson
+    name: dubbo
+    transporter: netty4

@@ -1,12 +1,6 @@
 package cn.jeff.study.dubbodemoconsumer;
 
 import cn.jeff.study.dubbodemoprovider.HelloService;
-import org.springframework.boot.task.TaskExecutorBuilder;
-import org.springframework.context.annotation.Bean;
-import org.springframework.core.task.TaskExecutor;
-import org.springframework.scheduling.config.TaskExecutorFactoryBean;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author swzhang

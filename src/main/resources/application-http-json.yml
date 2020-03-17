@@ -1,0 +1,5 @@
+dubbo:
+  protocol:
+    name: http
+    serialization: fastjson
+    server: servlet
