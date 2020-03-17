@@ -44,7 +44,10 @@ public class ConsumeController {
     @GetMapping(value = "/consume/{i}")
     public ResponseEntity<String> read1k(@PathVariable(name = "i") Integer i) {
         String word = helloService.getOneWord(i);
-
+        WordRunner wordRunner = new WordRunner();
+        wordRunner.setHelloService(helloService);
+        wordRunner.setI(i);
+        taskExecutor.execute(wordRunner);
         return ResponseEntity.ok(word);
     }
 }
