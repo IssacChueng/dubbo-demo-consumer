@@ -1,7 +1,7 @@
 spring:
   application:
     name: dubbo-demo-consumer
-s: 2
+s: 3
 dubbo:
   registry:
     address: zookeeper://master:2290
