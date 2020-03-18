@@ -112,7 +112,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <outputDirectory>/Users/jeff/test/dubbo/</outputDirectory>
+                    <mainClass>cn.jeff.study.dubbodemoconsumer.DubboDemoConsumerApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

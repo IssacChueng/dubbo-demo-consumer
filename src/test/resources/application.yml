@@ -3,6 +3,6 @@ spring:
     name: dubbo-demo-consumer
 dubbo:
   registry:
-    address: zookeeper://master:2290
+    address: zookeeper://127.0.0.1:2290
   application:
     name: dubbo-demo
