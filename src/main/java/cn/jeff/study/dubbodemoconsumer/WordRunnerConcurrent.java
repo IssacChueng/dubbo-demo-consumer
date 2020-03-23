@@ -40,6 +40,7 @@ public class WordRunnerConcurrent {
         start.countDown();
         long nowStart = System.currentTimeMillis();
         try {
+            log.info("end await");
             end.await();
         } catch (InterruptedException e) {
             log.info("end await interrupt");

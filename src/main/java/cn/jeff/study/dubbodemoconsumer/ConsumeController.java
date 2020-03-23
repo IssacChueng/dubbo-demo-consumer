@@ -60,7 +60,7 @@ public class ConsumeController {
         wordRunnerConcurrent.setHelloService(helloService);
         wordRunnerConcurrent.setWord(word);
         wordRunnerConcurrent.setConcurrent(concurrent);
-        wordRunnerConcurrent.readWord();
+        taskExecutor.execute(wordRunnerConcurrent::readWord);
         return ResponseEntity.ok("ok");
     }
 }
