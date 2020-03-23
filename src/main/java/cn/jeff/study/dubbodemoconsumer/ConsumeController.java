@@ -46,7 +46,7 @@ public class ConsumeController {
         String word = helloService.getOneWord(i);
         WordRunner wordRunner = new WordRunner();
         wordRunner.setHelloService(helloService);
-        wordRunner.setI(i);
+        wordRunner.setWord(i);
         taskExecutor.execute(wordRunner);
         return ResponseEntity.ok(word);
     }

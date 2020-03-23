@@ -14,7 +14,7 @@ public class WordRunner implements Runnable {
 
     private HelloService helloService;
 
-    private int i;
+    private int word;
 
     @Override
     public void run() {
@@ -22,7 +22,7 @@ public class WordRunner implements Runnable {
         long start = System.currentTimeMillis();
         int i = 0;
         while (i < 10000) {
-            helloService.getOneWord(i);
+            helloService.getOneWord(word);
             i++;
         }
 
