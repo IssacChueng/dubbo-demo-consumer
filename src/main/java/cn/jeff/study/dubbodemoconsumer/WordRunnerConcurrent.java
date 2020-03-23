@@ -28,6 +28,7 @@ public class WordRunnerConcurrent {
             new Thread(() -> {
                 try {
                     start.await();
+                    helloService.getOneWord(word);
                 } catch (InterruptedException e) {
                     log.info("start await interrupt");
                 } finally {
