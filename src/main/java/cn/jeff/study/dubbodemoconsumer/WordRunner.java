@@ -28,6 +28,6 @@ public class WordRunner implements Runnable {
 
         long end = System.currentTimeMillis();
 
-        log.info("10000 {} times used {} seconds", i, (end - start)/ 1000);
+        log.info("{} word 10000 times used {} seconds", word, (end - start)/ 1000);
     }
 }
