@@ -50,4 +50,17 @@ public class ConsumeController {
         taskExecutor.execute(wordRunner);
         return ResponseEntity.ok(word);
     }
+
+    @GetMapping(value = "/consume/{concurrent}/{word}")
+    public ResponseEntity<String> readConcurrent(
+            @PathVariable(name = "concurrent") Integer concurrent,
+            @PathVariable(name = "word") Integer word
+    ) {
+        WordRunnerConcurrent wordRunnerConcurrent = new WordRunnerConcurrent();
+        wordRunnerConcurrent.setHelloService(helloService);
+        wordRunnerConcurrent.setWord(word);
+        wordRunnerConcurrent.setConcurrent(concurrent);
+        wordRunnerConcurrent.readWord();
+        return ResponseEntity.ok("ok");
+    }
 }

@@ -19,4 +19,5 @@ public class DubboDemoConsumerApplication {
         return taskExecutorBuilder.corePoolSize(2)
                 .maxPoolSize(2).build();
     }
+
 }
