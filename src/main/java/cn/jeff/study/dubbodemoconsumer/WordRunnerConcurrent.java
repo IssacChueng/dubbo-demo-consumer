@@ -29,7 +29,7 @@ public class WordRunnerConcurrent {
                 try {
                     start.await();
                     helloService.getOneWord(word);
-                } catch (InterruptedException e) {
+                } catch (Exception e) {
                     log.info("start await interrupt");
                 } finally {
                     end.countDown();
@@ -42,7 +42,7 @@ public class WordRunnerConcurrent {
         try {
             log.info("end await");
             end.await();
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             log.info("end await interrupt");
         }
 
