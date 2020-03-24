@@ -30,7 +30,7 @@ public class WordRunnerConcurrent {
                     start.await();
                     helloService.getOneWord(word);
                 } catch (Exception e) {
-                    log.info("start await interrupt");
+                    log.error(e.getMessage(), e);
                 } finally {
                     end.countDown();
                 }
@@ -43,7 +43,7 @@ public class WordRunnerConcurrent {
             log.info("end await");
             end.await();
         } catch (Exception e) {
-            log.info("end await interrupt");
+            log.error(e.getMessage(), e);
         }
 
         long nowEnd = System.currentTimeMillis();
